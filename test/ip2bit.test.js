@@ -13,7 +13,7 @@ describe('./test/ip2bit.test.js', function () {
   })
   describe('a string with spaces between two digits', function () {
     it('should process the output normally ', function (done) {
-      Ip2int.to32bit('255.173. 173.39').should.be.Number()
+      Ip2int.to32bit('255.173. 173.39').should.be.exactly(4289572135).and.be.a.Number()
       done()
     })
   })
