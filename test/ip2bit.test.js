@@ -25,10 +25,18 @@ describe('./test/ip2bit.test.js', function () {
       done()
     })
   })
-  describe(' ip某一位 > 255', function () {
+  describe('ip某一位 > 255', function () {
     it('should throw a error', function (done) {
       (function () {
         Ip2int.to32bit('256.123.73.39')
+      }).should.throw(Error)
+      done()
+    })
+  })
+  describe('ip某一位 < 0', function () {
+    it('should throw a error', function (done) {
+      (function () {
+        Ip2int.to32bit('-6.123.73.39')
       }).should.throw(Error)
       done()
     })
