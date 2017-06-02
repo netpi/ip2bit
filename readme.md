@@ -1,5 +1,5 @@
 ## ip2bit
-
+> node >= 6.0.0
 ### Directory Structure
 ```sh
 ├── lib
