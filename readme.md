@@ -13,9 +13,15 @@
 ### Test
 
 ```sh
+
 yarn test
 #  or
 npm run test 
+
+# 测试代码覆盖率
+
+yarn cov
+
 ```
 
 ### example
