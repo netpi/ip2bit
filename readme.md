@@ -1,7 +1,7 @@
 ## ip2bit
 
 ### Directory Structure
-
+```sh
 ├── lib
 │   └── ip2bit.js
 ├── package.json
@@ -9,7 +9,7 @@
 ├── test
 │   └── ip2bit.test.js
 └── yarn.lock
-
+```
 ### Test
 
 ```sh
