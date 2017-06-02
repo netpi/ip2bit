@@ -13,14 +13,22 @@ describe('./test/ip2bit.test.js', function () {
   })
   describe('a string with spaces between two digits', function () {
     it('should process the output normally ', function (done) {
-      Ip2int.to32bit('180 .173. 73.39').should.be.Number()
+      Ip2int.to32bit('255.173. 173.39').should.be.Number()
       done()
     })
   })
-  describe('a error ip string', function () {
+  describe('非数字.格式', function () {
     it('should throw a error', function (done) {
       (function () {
-        Ip2int.to32bit('错误ip.格式.73.39')
+        Ip2int.to32bit('非数字.格式.73.39')
+      }).should.throw(Error)
+      done()
+    })
+  })
+  describe(' ip某一位 > 255', function () {
+    it('should throw a error', function (done) {
+      (function () {
+        Ip2int.to32bit('256.123.73.39')
       }).should.throw(Error)
       done()
     })
