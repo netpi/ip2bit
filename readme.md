@@ -1,5 +1,5 @@
 ## ip2bit
-
+> node >= 6.0.0
 ### Directory Structure
 ```sh
 ├── lib
@@ -54,7 +54,7 @@ ip = '256.12.5.1' // > 255
 try {
   ip2bit.to32bit(ip)
 } catch (e) {
-  console.log(ip, 'some error with [1 72.168.5.1]')
+  console.log(ip, 'some error with [256.12.5.1]')
 }
 
 
