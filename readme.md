@@ -47,7 +47,7 @@ ip = '错误.IP.5.1'
 try {
   ip2bit.to32bit(ip)
 } catch (e) {
-  console.log(ip, 'some error with [1 72.168.5.1]')
+  console.log(ip, 'some error with [错误.IP.5.1]')
 }
 
 ip = '256.12.5.1' // > 255
